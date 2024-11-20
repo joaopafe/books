@@ -1,0 +1,27 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "project for study frontend and backend with an application named books",
+  "main": "./backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaopafe/books.git"
+  },
+  "author": "João Ferreira (joao.ea2020@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaopafe/books/issues"
+  },
+  "homepage": "https://github.com/joaopafe/books#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
