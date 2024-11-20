@@ -4,7 +4,7 @@
   "description": "project for study frontend and backend with an application named books",
   "main": "./backend/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./backend/server.js"
   },
   "repository": {
     "type": "git",
