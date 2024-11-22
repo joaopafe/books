@@ -28,4 +28,24 @@ class BookController {
 
     return res.json({ message: "Book created succesfully" });
   }
+
+  static async update(req, res) {
+    const id = req.body.id;
+    const title = req.body.title;
+    const author = req.body.author;
+    const publicationDate = req.body.publicationDate;
+    const description = req.body.description;
+    const image = req.body.image;
+
+    await BookRepository.update(
+      id,
+      title,
+      author,
+      publicationDate,
+      description,
+      image
+    );
+
+    return res.json({ message: "Book updated succesfully" });
+  }
 }
