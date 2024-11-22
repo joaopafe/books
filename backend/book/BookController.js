@@ -8,7 +8,7 @@ class BookController {
   static async listAll(req, res) {
     const books = await BookRepository.listAll();
 
-    return res.json(books);
+    return res.status(200).json(books);
   }
 
   static async create(req, res) {
@@ -26,11 +26,11 @@ class BookController {
       image
     );
 
-    return res.json({ message: "Book created succesfully" });
+    return res.status(201).json({ message: "Book created succesfully" });
   }
 
   static async update(req, res) {
-    const id = req.body.id;
+    const id = req.params.id;
     const title = req.body.title;
     const author = req.body.author;
     const publicationDate = req.body.publicationDate;
@@ -46,6 +46,14 @@ class BookController {
       image
     );
 
-    return res.json({ message: "Book updated succesfully" });
+    return res.status(200).json({ message: "Book updated succesfully" });
+  }
+
+  static async delete(req, res) {
+    const id = req.params.id;
+
+    await BookRepository.delete(id);
+
+    return res.status(200).json({ message: "Book deleted succesfully" });
   }
 }
