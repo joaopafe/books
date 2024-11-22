@@ -26,6 +26,21 @@ class BookRepository {
       [title, author, publicationDate, description, image]
     );
   }
+
+  static async update(id, title, author, publicationDate, description, image) {
+    return this.db.all(
+      `UPDATE Book SET
+      title = ?,
+      author = ?,
+      author = ?,
+      publicationDate = ?,
+      description = ?,
+      image = ?
+      WHERE id = ?
+      `,
+      [title, author, publicationDate, description, image, id]
+    );
+  }
 }
 
 module.exports = BookRepository;
