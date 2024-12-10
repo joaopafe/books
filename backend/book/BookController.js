@@ -57,3 +57,5 @@ class BookController {
     return res.status(200).json({ message: "Book deleted succesfully" });
   }
 }
+
+module.exports = BookController;

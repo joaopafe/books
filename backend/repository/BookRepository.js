@@ -1,8 +1,9 @@
 const openDB = require("../configDB");
-const db = await openDB;
 
 class BookRepository {
   static async createTable() {
+    const db = await openDB();
+
     return db.exec(
       `CREATE TABLE IF NOT EXISTS Book
       (id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -13,10 +14,14 @@ class BookRepository {
   }
 
   static async listAll() {
+    const db = await openDB();
+
     return db.run(`SELECT * FROM Book`);
   }
 
   static async create(title, author, publicationDate, description, image) {
+    const db = await openDB();
+
     return db.all(
       `INSERT INTO Book (title, author,
       publication_date, description, image)
@@ -27,6 +32,8 @@ class BookRepository {
   }
 
   static async update(id, title, author, publicationDate, description, image) {
+    const db = await openDB();
+
     return db.all(
       `UPDATE Book SET
       title = ?,
@@ -42,6 +49,8 @@ class BookRepository {
   }
 
   static async delete(id) {
+    const db = await openDB();
+
     return db.all(`DELETE FROM Book WHERE id = ?`, [id]);
   }
 }
