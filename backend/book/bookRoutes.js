@@ -46,4 +46,15 @@ bookRouter.put(
   BookController.update
 );
 
+bookRouter.delete(
+  "/:id",
+  celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+      id: Joi.number().positive().required(),
+    }),
+  }),
+  verifyIfExistsBook,
+  BookController.delete
+);
+
 module.exports = bookRouter;
