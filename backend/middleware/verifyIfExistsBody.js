@@ -3,3 +3,5 @@ const verifyIfExistsBody = (req, res, next) => {
 
   next();
 };
+
+module.exports = verifyIfExistsBody;
