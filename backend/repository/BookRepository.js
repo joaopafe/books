@@ -16,7 +16,7 @@ class BookRepository {
   static async listAll() {
     const db = await openDB();
 
-    return db.run(`SELECT * FROM Book`);
+    return db.all(`SELECT * FROM Book`);
   }
 
   static async create(title, author, publicationDate, description, image) {
@@ -38,8 +38,7 @@ class BookRepository {
       `UPDATE Book SET
       title = ?,
       author = ?,
-      author = ?,
-      publicationDate = ?,
+      publication_date = ?,
       description = ?,
       image = ?
       WHERE id = ?
