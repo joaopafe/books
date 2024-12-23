@@ -1,0 +1,123 @@
+@import url("../variablesStyle.css");
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Font.ttf");
+}
+
+body {
+  font-family: "Inter";
+  display: flex;
+  flex-direction: var(--flex-direction);
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  height: var(--header-height);
+  width: var(--header-width);
+}
+
+#page-title {
+  font-size: var(--page-title-font-size);
+  width: var(--page-title-width);
+}
+
+#new-book {
+  font-size: var(--new-book-font-size);
+  width: var(--new-book-width);
+  display: flex;
+  justify-content: flex-end;
+}
+
+#search-area {
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: var(--search-area-width);
+  height: 60px;
+}
+
+#search-input {
+  width: var(--search-input-width);
+}
+
+#search-input-box {
+  border: none;
+  border-radius: 12px;
+  font-size: 25px;
+  padding-left: 16px;
+  height: var(--search-input-box-height);
+  width: var(--search-input-box-width);
+}
+
+#search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--search-button-width);
+}
+
+#books-area {
+  margin-top: var(--books-area-margin-top);
+  width: var(--books-area-width);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#book {
+  width: var(--book-width);
+  height: var(--book-height);
+  margin-bottom: var(--book-margin-bottom);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#book img {
+  max-width: 160px;
+  max-height: 180px;
+  width: auto;
+  height: auto;
+}
+
+#book-image {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 212px;
+  background-color: #e0e0e2;
+}
+
+#book-informations {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 268px;
+}
+
+#book-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 16px 16px 16px 16px;
+}
+
+#book-description {
+  display: flex;
+  text-align: justify;
+  font-size: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
