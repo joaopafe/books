@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const PORT = process.env.PORT || 3000;
 const bookRouter = require("./book/bookRoutes");
 const { errors } = require("celebrate");
 
 const app = express();
+app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 
 app.get("/", (req, res) => {
