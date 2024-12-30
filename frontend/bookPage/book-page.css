@@ -73,7 +73,7 @@ body {
   flex-wrap: wrap;
 }
 
-#book {
+.book {
   width: var(--book-width);
   height: var(--book-height);
   margin-bottom: var(--book-margin-bottom);
@@ -82,7 +82,7 @@ body {
   align-items: center;
 }
 
-#book img {
+.book img {
   max-width: 160px;
   max-height: 180px;
   width: auto;
