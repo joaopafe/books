@@ -26,6 +26,35 @@
     </div>
 
     <div id="books-area"></div>
+
+    <div id="new-book-form">
+      <div id="form-title">Novo livro</div>
+
+      <div id="first-section-form">
+        <div id="text-inputs">
+          <input id="title-input" type="text" placeholder="Título" />
+          <input id="author-input" type="text" placeholder="Autor" />
+          <input
+            id="publication-date-input"
+            type="text"
+            placeholder="Data de publicação"
+          />
+        </div>
+
+        <div id="image-input">
+          <div id="new-book-image"><img src="../images/image-icon.png" /></div>
+          <label for="new-image-input" id="new-image-message">
+            Escolher imagem
+          </label>
+        </div>
+
+        <input id="new-image-input" type="file" accept="image/*" />
+      </div>
+
+      <div id="second-section-form">
+        <input type="text" id="description-input" placeholder="Descrição" />
+      </div>
+    </div>
   </body>
 
   <script src="../client/Book.js"></script>
