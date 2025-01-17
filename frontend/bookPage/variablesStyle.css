@@ -21,8 +21,8 @@
     /* Search area: */
     --search-area-width: 80%;
     --search-input-width: 95%;
-    --search-input-box-height: 90%;
-    --search-input-box-width: 99%;
+    --search-input-box-height: 100%;
+    --search-input-box-width: 100%;
     --search-button-width: 5%;
     --search-button-height: 100%;
 
@@ -35,6 +35,22 @@
     --book-width: 300px;
     --book-height: 480px;
     --book-margin-bottom: 48px;
+
+    /* New book form: */
+    --new-book-form-height: 700px;
+    --new-book-form-width: 780px;
+    --form-title-side-margins: 312.5px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-side-margins: 40px;
+    --first-section-direction: row;
+    --text-inputs-div-width: 428px;
+    --text-inputs-width: 100%;
+    --button-height: 100%;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
 
@@ -61,8 +77,8 @@
     /* Search area: */
     --search-area-width: 80%;
     --search-input-width: 95%;
-    --search-input-box-height: 90%;
-    --search-input-box-width: 99%;
+    --search-input-box-height: 100%;
+    --search-input-box-width: 100%;
     --search-button-width: 5%;
     --search-button-height: 100%;
 
@@ -101,8 +117,8 @@
     /* Search area: */
     --search-area-width: 80%;
     --search-input-width: 90%;
-    --search-input-box-height: 94%;
-    --search-input-box-width: 95%;
+    --search-input-box-height: 100%;
+    --search-input-box-width: 100%;
     --search-button-width: 10%;
     --search-button-height: 100%;
 
@@ -141,8 +157,8 @@
     /* Search area: */
     --search-area-width: 80%;
     --search-input-width: 90%;
-    --search-input-box-height: 94%;
-    --search-input-box-width: 95%;
+    --search-input-box-height: 100%;
+    --search-input-box-width: 100%;
     --search-button-width: 10%;
     --search-button-height: 100%;
 

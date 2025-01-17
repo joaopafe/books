@@ -1,6 +1,9 @@
 let response = {};
 let responseBody = {};
 
+const inputFile = document.querySelector("#new-image-input");
+const pictureImage = document.querySelector("#image-input");
+
 const getBooks = async () => {
   response = await Book.getBooks();
 
@@ -46,4 +49,29 @@ const listBooks = (bookList) => {
 
 getBooks();
 
-console.log(response);
+inputFile.addEventListener("change", (e) => {
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", (e) => {
+      const readerTarget = e.target;
+
+      const imageElement = document.createElement("img");
+      imageElement.src = readerTarget.result;
+      imageElement.setAttribute("for", "new-image-input");
+
+      pictureImage.innerHTML = `
+        <label for="new-image-input" id="image-label"> <label/>
+      `;
+
+      const imageLabel = document.querySelector("#image-label");
+
+      imageLabel.appendChild(imageElement);
+    });
+
+    reader.readAsDataURL(file);
+  }
+});

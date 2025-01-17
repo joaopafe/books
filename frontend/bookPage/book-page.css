@@ -122,3 +122,137 @@ body {
   margin-left: 16px;
   margin-right: 16px;
 }
+
+#new-book-form {
+  border-radius: 16px;
+  height: var(--new-book-form-height);
+  width: var(--new-book-form-width);
+  display: flex;
+  flex-direction: column;
+}
+
+#form-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: var(--form-title-top-margin);
+  margin-bottom: var(--form-title-bottom-margin);
+  margin-left: var(--form-title-side-margins);
+  margin-right: var(--form-title-side-margins);
+}
+
+#first-section-form {
+  margin-left: var(--first-section-side-margins);
+  margin-right: var(--first-section-side-margins);
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: var(--first-section-direction);
+  gap: 32px;
+}
+
+#text-inputs {
+  width: var(--text-inputs-div-width);
+}
+
+#text-inputs input {
+  border: none;
+  border-radius: 12px;
+  width: var(--text-inputs-width);
+  height: 54px;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#title-input {
+  margin-bottom: 32px;
+}
+
+#author-input {
+  margin-bottom: 32px;
+}
+
+#image-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 226px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+#image-input img {
+  max-width: 240px;
+  max-height: 226px;
+  width: auto;
+  height: auto;
+}
+
+#new-image-input {
+  display: none;
+}
+
+#new-image-message {
+  cursor: pointer;
+}
+
+#second-section-form {
+  margin-right: var(--first-section-side-margins);
+  margin-left: var(--first-section-side-margins);
+  height: 200px;
+}
+
+#description-input {
+  font-family: "Inter";
+  display: flex;
+  text-align: justify;
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: start;
+  resize: none;
+}
+
+#form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+#form-buttons button {
+  height: var(--button-height);
+  width: var(--button-width);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+}
+
+#cancel-button {
+  background-color: #d5d5d5;
+  color: #202020;
+}
+
+#save-button {
+  background-color: #0093e6;
+  color: #ffffff;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+#cancel-button:hover {
+  background-color: #c1c1c1;
+}
+
+#save-button:hover {
+  opacity: 70%;
+}
