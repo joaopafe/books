@@ -3,6 +3,7 @@ let responseBody = {};
 
 const inputFile = document.querySelector("#new-image-input");
 const pictureImage = document.querySelector("#image-input");
+const modalElement = document.querySelector("#new-book-form");
 
 const getBooks = async () => {
   response = await Book.getBooks();
@@ -75,3 +76,11 @@ inputFile.addEventListener("change", (e) => {
     reader.readAsDataURL(file);
   }
 });
+
+const openModal = (modalElement) => {
+  modalElement.style.display = "flex";
+};
+
+const closeModal = (modalElement) => {
+  modalElement.style.display = "none";
+};

@@ -13,7 +13,7 @@
   <body>
     <div id="header">
       <div id="page-title">Livros</div>
-      <div id="new-book">Novo</div>
+      <div id="new-book" onclick="openModal(modalElement)">Novo</div>
     </div>
 
     <div id="search-area">
@@ -56,7 +56,9 @@
       </div>
 
       <div id="form-buttons">
-        <button id="cancel-button">Cancelar</button>
+        <button id="cancel-button" onclick="closeModal(modalElement)">
+          Cancelar
+        </button>
 
         <button id="save-button">Salvar</button>
       </div>
