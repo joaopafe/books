@@ -45,6 +45,7 @@
     --first-section-side-margins: 40px;
     --first-section-direction: row;
     --second-section-form-width: 90%;
+    --description-input-width: 100%;
     --text-inputs-div-width: 428px;
     --text-inputs-width: 100%;
     --form-buttons-flex-direction: row;
@@ -105,6 +106,7 @@
     --first-section-side-margins: 40px;
     --first-section-direction: row;
     --second-section-form-width: 90%;
+    --description-input-width: 100%;
     --text-inputs-div-width: 428px;
     --text-inputs-width: 100%;
     --form-buttons-flex-direction: row;
@@ -166,8 +168,9 @@
     --first-section-side-margins: 0px;
     --first-section-direction: column;
     --second-section-form-width: 100%;
+    --description-input-width: 90%;
     --text-inputs-div-width: 435px;
-    --text-inputs-width: 100%;
+    --text-inputs-width: 90%;
     --form-buttons-flex-direction: column;
     --form-buttons-height: 145px;
     --form-buttons-gap: 24px;
@@ -228,10 +231,11 @@
     --first-section-direction: column;
     --second-section-form-width: 100%;
     --text-inputs-div-width: 320px;
-    --text-inputs-width: 100%;
+    --text-inputs-width: 90%;
     --form-buttons-flex-direction: column;
     --form-buttons-height: 145px;
     --form-buttons-gap: 24px;
+    --description-input-width: 90%;
     --button-height: 60px;
     --button-width: 228px;
     --button-border-radius: 100px;

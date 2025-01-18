@@ -158,6 +158,9 @@ body {
 
 #text-inputs {
   width: var(--text-inputs-div-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #text-inputs input {
@@ -205,6 +208,8 @@ body {
 }
 
 #second-section-form {
+  display: flex;
+  justify-content: center;
   margin-right: var(--first-section-side-margins);
   margin-left: var(--first-section-side-margins);
   height: 200px;
@@ -217,7 +222,7 @@ body {
   text-align: justify;
   border-radius: 12px;
   border: none;
-  width: 100%;
+  width: var(--description-input-width);
   height: 100%;
   font-size: 16px;
   padding-top: 24px;
