@@ -44,8 +44,12 @@
     --form-title-bottom-margin: 32px;
     --first-section-side-margins: 40px;
     --first-section-direction: row;
+    --second-section-form-width: 90%;
     --text-inputs-div-width: 428px;
     --text-inputs-width: 100%;
+    --form-buttons-flex-direction: row;
+    --form-buttons-height: 60px;
+    --form-buttons-gap: 48px;
     --button-height: 100%;
     --button-width: 228px;
     --button-border-radius: 100px;
@@ -91,6 +95,26 @@
     --book-width: 300px;
     --book-height: 480px;
     --book-margin-bottom: 48px;
+
+    /* New book form: */
+    --new-book-form-height: 700px;
+    --new-book-form-width: 780px;
+    --form-title-side-margins: 312.5px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-side-margins: 40px;
+    --first-section-direction: row;
+    --second-section-form-width: 90%;
+    --text-inputs-div-width: 428px;
+    --text-inputs-width: 100%;
+    --form-buttons-flex-direction: row;
+    --form-buttons-height: 60px;
+    --form-buttons-gap: 48px;
+    --button-height: 100%;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
 
@@ -131,6 +155,27 @@
     --book-width: 300px;
     --book-height: 480px;
     --book-margin-bottom: 48px;
+
+    /* New book form: */
+    --new-book-form-height: 1024px;
+    --new-book-form-width: 440px;
+    --form-title-side-margins: 140px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-form-justify-content: center;
+    --first-section-side-margins: 0px;
+    --first-section-direction: column;
+    --second-section-form-width: 100%;
+    --text-inputs-div-width: 435px;
+    --text-inputs-width: 100%;
+    --form-buttons-flex-direction: column;
+    --form-buttons-height: 145px;
+    --form-buttons-gap: 24px;
+    --button-height: 60px;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
 
@@ -155,21 +200,42 @@
     --header-height: 100px;
 
     /* Search area: */
-    --search-area-width: 80%;
+    --search-area-width: 90%;
     --search-input-width: 90%;
     --search-input-box-height: 100%;
     --search-input-box-width: 100%;
-    --search-button-width: 10%;
+    --search-button-width: 20%;
     --search-button-height: 100%;
 
     /* Books area: */
     --books-area-flex-direction: column;
     --books-area-margin-top: 64px;
-    --books-area-width: 80%;
+    --books-area-width: 100%;
 
     /* Book: */
     --book-width: 300px;
     --book-height: 480px;
     --book-margin-bottom: 48px;
+
+    /* New book form: */
+    --new-book-form-height: 1024px;
+    --new-book-form-width: 320px;
+    --form-title-side-margins: 0px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-form-justify-content: center;
+    --first-section-side-margins: 0px;
+    --first-section-direction: column;
+    --second-section-form-width: 100%;
+    --text-inputs-div-width: 320px;
+    --text-inputs-width: 100%;
+    --form-buttons-flex-direction: column;
+    --form-buttons-height: 145px;
+    --form-buttons-gap: 24px;
+    --button-height: 60px;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
