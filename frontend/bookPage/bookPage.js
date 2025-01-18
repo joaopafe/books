@@ -4,6 +4,7 @@ let responseBody = {};
 const inputFile = document.querySelector("#new-image-input");
 const pictureImage = document.querySelector("#image-input");
 const modalElement = document.querySelector("#new-book-form");
+const searchInput = document.querySelector("#search-input");
 
 const getBooks = async () => {
   response = await Book.getBooks();
@@ -84,3 +85,22 @@ const openModal = (modalElement) => {
 const closeModal = (modalElement) => {
   modalElement.style.display = "none";
 };
+
+const formatString = (value) => {
+  return value.toLowerCase().trim();
+};
+
+searchInput.addEventListener("input", (event) => {
+  const value = formatString(event.target.value);
+  const books = document.querySelectorAll(".book");
+
+  books.forEach((book) => {
+    if (formatString(book.innerText).indexOf(value) !== -1) {
+      book.style.display = "flex";
+    }
+
+    if (formatString(book.innerText).indexOf(value) === -1) {
+      book.style.display = "none";
+    }
+  });
+});
