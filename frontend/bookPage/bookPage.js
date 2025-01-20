@@ -5,6 +5,10 @@ const inputFile = document.querySelector("#new-image-input");
 const pictureImage = document.querySelector("#image-input");
 const modalElement = document.querySelector("#new-book-form");
 const searchInput = document.querySelector("#search-input");
+const titleInput = document.querySelector("#title-input");
+const authorInput = document.querySelector("#author-input");
+const publicationDateInput = document.querySelector("#publication-date-input");
+const descriptionInput = document.querySelector("#description-input");
 
 const getBooks = async () => {
   response = await Book.getBooks();
@@ -21,6 +25,8 @@ const getBooks = async () => {
 };
 
 const listBooks = (bookList) => {
+  document.getElementById("books-area").innerHTML = "";
+
   bookList.forEach((book) => {
     const bookDiv = document.createElement("div");
     bookDiv.className = "book";
@@ -63,6 +69,7 @@ inputFile.addEventListener("change", (e) => {
 
       const imageElement = document.createElement("img");
       imageElement.src = readerTarget.result;
+      imageElement.setAttribute("id", "new-image-for-post");
       imageElement.setAttribute("for", "new-image-input");
 
       pictureImage.innerHTML = `
@@ -104,3 +111,39 @@ searchInput.addEventListener("input", (event) => {
     }
   });
 });
+
+const validateBook = () => {
+  const title = titleInput.value;
+  const author = authorInput.value;
+  const publicationDate = publicationDateInput.value;
+  const description = descriptionInput.value;
+  const imageInput = document.querySelector("#new-image-for-post");
+
+  if (
+    title.length === 0 ||
+    author.length === 0 ||
+    publicationDate.length === 0 ||
+    description.length === 0 ||
+    !imageInput
+  ) {
+    window.alert("Preencha todos os campos de forma válida");
+  }
+
+  if (
+    title.length > 0 &&
+    author.length > 0 &&
+    publicationDate.length > 0 &&
+    description.length > 0 &&
+    imageInput
+  ) {
+    const image = imageInput.src.slice(23);
+
+    postBook(title, author, publicationDate, description, image);
+  }
+};
+
+const postBook = async (title, author, publicationDate, description, image) => {
+  await Book.postBook(title, author, publicationDate, description, image);
+
+  getBooks();
+};

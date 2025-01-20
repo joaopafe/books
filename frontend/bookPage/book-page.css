@@ -33,6 +33,7 @@ body {
   width: var(--new-book-width);
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 #search-area {
