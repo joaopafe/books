@@ -41,10 +41,10 @@ const listBooks = (bookList) => {
 
     bookDiv.innerHTML = `
       <div id="book-image">
-        <img src="data:image/png;base64,${book.image}" alt="" srcset="" />
+        <img src="data:image/png;base64,${book.image}" alt="${book.title}"/>
       </div>
       <div id="book-informations">
-        <div id="book-title">${book.title}</div>
+        <div id="book-title" onclick="openBookDetails(${book.id})">${book.title}</div>
         <div id="book-description">
             ${description}
         </div>
@@ -146,4 +146,10 @@ const postBook = async (title, author, publicationDate, description, image) => {
   await Book.postBook(title, author, publicationDate, description, image);
 
   getBooks();
+};
+
+const openBookDetails = (bookId) => {
+  localStorage.setItem("bookId", bookId);
+
+  window.location.href = "../bookDetailsPage/book-details.page.html";
 };
