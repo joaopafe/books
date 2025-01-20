@@ -11,6 +11,12 @@ class BookController {
     return res.status(200).json(books);
   }
 
+  static async listById(req, res) {
+    const book = await BookRepository.listById(req.params.id);
+
+    return res.status(200).json(book);
+  }
+
   static async create(req, res) {
     const title = req.body.title;
     const author = req.body.author;

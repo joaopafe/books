@@ -10,6 +10,16 @@ BookController.createTable();
 
 bookRouter.get("/", BookController.listAll);
 
+bookRouter.get(
+  "/:id",
+  celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+      id: Joi.number().positive().required(),
+    }),
+  }),
+  BookController.listById
+);
+
 bookRouter.post(
   "/",
   verifyIfExistsBody,

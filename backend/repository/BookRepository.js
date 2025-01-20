@@ -19,6 +19,12 @@ class BookRepository {
     return db.all(`SELECT * FROM Book`);
   }
 
+  static async listById(id) {
+    const db = await openDB();
+
+    return db.all(`SELECT * FROM Book WHERE id = ?`, [id]);
+  }
+
   static async create(title, author, publicationDate, description, image) {
     const db = await openDB();
 
