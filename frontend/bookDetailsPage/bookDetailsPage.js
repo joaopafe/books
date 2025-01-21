@@ -163,4 +163,16 @@ const updateBook = async (
   if (response.status === 200) getBook();
 };
 
+const deleteBook = async () => {
+  response = await Book.deleteBook(bookId);
+
+  if (response.status === 500) {
+    window.alert("Servidor fora de ar. Tente novamente mais tarde");
+  }
+
+  if (response.status === 200) {
+    returnPage();
+  }
+};
+
 getBook();
