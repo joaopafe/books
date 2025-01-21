@@ -38,4 +38,10 @@ class Book {
       },
     });
   }
+
+  static async deleteBook(id) {
+    return fetch(`http://localhost:3000/book/${id}`, {
+      method: "DELETE",
+    });
+  }
 }
