@@ -37,6 +37,43 @@
 
       <div id="book-image"></div>
     </div>
+
+    <div id="edit-book-form">
+      <div id="form-title">Editar livro</div>
+
+      <div id="first-section-form">
+        <div id="text-inputs">
+          <input id="title-input" type="text" placeholder="Título" />
+          <input id="author-input" type="text" placeholder="Autor" />
+          <input
+            id="publication-date-input"
+            type="text"
+            placeholder="Data de publicação"
+          />
+        </div>
+
+        <div id="image-input">
+          <div id="edit-book-image"><img src="../images/image-icon.png" /></div>
+          <label for="edit-image-input" id="edit-image-message">
+            Escolher imagem
+          </label>
+        </div>
+
+        <input id="edit-image-input" type="file" accept="image/*" />
+      </div>
+
+      <div id="second-section-form">
+        <textarea placeholder="Descrição" id="description-input"></textarea>
+      </div>
+
+      <div id="form-buttons">
+        <button id="cancel-button" onclick="closeModal(modalElement)">
+          Cancelar
+        </button>
+
+        <button id="save-button" onclick="validateBook()">Salvar</button>
+      </div>
+    </div>
   </body>
 
   <script src="../client/Book.js"></script>

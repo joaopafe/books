@@ -8,6 +8,27 @@
 
     /* book area */
     --book-area-flex-direction: row;
+
+    /* edit book form: */
+    --edit-book-form-height: 700px;
+    --edit-book-form-width: 780px;
+    --form-title-side-margins: 312.5px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-side-margins: 40px;
+    --first-section-direction: row;
+    --second-section-form-width: 90%;
+    --description-input-width: 100%;
+    --text-inputs-div-width: 428px;
+    --text-inputs-width: 100%;
+    --form-buttons-flex-direction: row;
+    --form-buttons-height: 60px;
+    --form-buttons-gap: 48px;
+    --button-height: 100%;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
 
@@ -22,6 +43,27 @@
     /* book area */
     --book-area-flex-direction: column;
     --book-area-align-items: center;
+
+    /* edit book form: */
+    --edit-book-form-height: 700px;
+    --edit-book-form-width: 780px;
+    --form-title-side-margins: 312.5px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-side-margins: 40px;
+    --first-section-direction: row;
+    --second-section-form-width: 90%;
+    --description-input-width: 100%;
+    --text-inputs-div-width: 428px;
+    --text-inputs-width: 100%;
+    --form-buttons-flex-direction: row;
+    --form-buttons-height: 60px;
+    --form-buttons-gap: 48px;
+    --button-height: 100%;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
 
@@ -36,6 +78,28 @@
     /* book area */
     --book-area-flex-direction: column;
     --book-area-align-items: center;
+
+    /* edit book form: */
+    --edit-book-form-height: 1024px;
+    --edit-book-form-width: 440px;
+    --form-title-side-margins: 140px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-form-justify-content: center;
+    --first-section-side-margins: 0px;
+    --first-section-direction: column;
+    --second-section-form-width: 100%;
+    --description-input-width: 90%;
+    --text-inputs-div-width: 435px;
+    --text-inputs-width: 90%;
+    --form-buttons-flex-direction: column;
+    --form-buttons-height: 145px;
+    --form-buttons-gap: 24px;
+    --button-height: 60px;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
 
@@ -50,5 +114,27 @@
     /* book area */
     --book-area-flex-direction: column;
     --book-area-align-items: center;
+
+    /* edit book form: */
+    --edit-book-form-height: 1024px;
+    --edit-book-form-width: 320px;
+    --form-title-side-margins: 0px;
+    --form-title-top-margin: 40px;
+    --form-title-bottom-margin: 32px;
+    --first-section-form-justify-content: center;
+    --first-section-side-margins: 0px;
+    --first-section-direction: column;
+    --second-section-form-width: 100%;
+    --text-inputs-div-width: 320px;
+    --text-inputs-width: 90%;
+    --form-buttons-flex-direction: column;
+    --form-buttons-height: 145px;
+    --form-buttons-gap: 24px;
+    --description-input-width: 90%;
+    --button-height: 60px;
+    --button-width: 228px;
+    --button-border-radius: 100px;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
   }
 }
