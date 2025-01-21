@@ -22,4 +22,20 @@ class Book {
       },
     });
   }
+
+  static async putBook(id, title, author, publicationDate, description, image) {
+    return fetch(`http://localhost:3000/book/${id}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        title,
+        author,
+        publicationDate,
+        description,
+        image,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
 }
