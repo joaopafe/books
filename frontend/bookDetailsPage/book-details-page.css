@@ -1,0 +1,101 @@
+@import url("./variables-style.css");
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Font.ttf");
+}
+
+body {
+  font-family: "Inter";
+  background-color: #f0f0f0;
+}
+
+#header {
+  margin-top: 64px;
+  margin-left: var(--side-margins);
+  margin-right: var(--side-margins);
+  display: flex;
+  justify-content: space-between;
+}
+
+#back-button {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#back-button img {
+  max-width: 28px;
+  max-height: 28px;
+  width: auto;
+  height: auto;
+}
+
+#book-operations-buttons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#edit-button {
+  cursor: pointer;
+}
+
+#delete-button {
+  color: #ad0000;
+  cursor: pointer;
+}
+
+#book-area {
+  margin-left: var(--side-margins);
+  margin-right: var(--side-margins);
+  margin-top: 64px;
+  gap: 40px;
+  display: flex;
+  flex-direction: var(--book-area-flex-direction);
+  align-items: var(--book-area-align-items);
+}
+
+#book-informations {
+  width: 100%;
+}
+
+#book-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+#publication-informations {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+#publication-date {
+  text-align: end;
+}
+
+#book-description {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 32px;
+}
+
+#book-image {
+  width: 300px;
+  height: 460px;
+}
+
+#book-image img {
+  max-width: 300px;
+  max-height: 460px;
+  width: auto;
+  height: auto;
+}
