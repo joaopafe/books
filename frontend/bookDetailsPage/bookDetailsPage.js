@@ -111,4 +111,56 @@ inputFile.addEventListener("change", (e) => {
   }
 });
 
+const validateBook = () => {
+  const title = titleInput.value;
+  const author = authorInput.value;
+  const publicationDate = publicationDateInput.value;
+  const description = descriptionInput.value;
+  const imageInput = document.querySelector("#edit-image-for-post");
+
+  if (
+    title.length === 0 ||
+    author.length === 0 ||
+    publicationDate.length === 0 ||
+    description.length === 0 ||
+    !imageInput
+  ) {
+    window.alert("Preencha todos os campos de forma válida");
+  }
+
+  if (
+    title.length > 0 &&
+    author.length > 0 &&
+    publicationDate.length > 0 &&
+    description.length > 0 &&
+    imageInput
+  ) {
+    const image = imageInput.src.slice(22);
+
+    updateBook(title, author, publicationDate, description, image);
+  }
+};
+
+const updateBook = async (
+  title,
+  author,
+  publicationDate,
+  description,
+  image
+) => {
+  response = await Book.putBook(
+    bookId,
+    title,
+    author,
+    publicationDate,
+    description,
+    image
+  );
+
+  if (response.status === 500)
+    window.alert("Servidor fora de ar. Tente novamente mais tarde");
+
+  if (response.status === 200) getBook();
+};
+
 getBook();
