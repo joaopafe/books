@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./book-details-page.css" />
 
     <title>Livro</title>
   </head>
 
   <body>
     <div id="header">
-      <div id="back-button">
+      <div id="back-button" onclick="returnPage()">
         <img src="../images/back-icon.png" alt="" srcset="" />
         <div id="back-text">Voltar</div>
       </div>
 
       <div id="book-operations-buttons">
-        <div>Editar</div>
-        <div>Excluir</div>
+        <div id="edit-button">Editar</div>
+        <div id="delete-button">Excluir</div>
       </div>
     </div>
 
@@ -37,4 +38,7 @@
       <div id="book-image"></div>
     </div>
   </body>
+
+  <script src="../client/Book.js"></script>
+  <script src="./bookDetailsPage.js"></script>
 </html>
