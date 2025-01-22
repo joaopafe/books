@@ -40,7 +40,6 @@
         "summary": "Create a book on the application",
         "description": "This route is responsible for create a book on the application",
         "tags": ["Book"],
-        "security": [{ "bearerAuth": [] }],
         "requestBody": {
           "content": {
             "application/json": {
