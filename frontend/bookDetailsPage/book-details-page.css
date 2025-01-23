@@ -55,6 +55,7 @@ body {
 }
 
 #book-area {
+  width: calc(100% - 2 * var(--side-margins));
   margin-left: var(--side-margins);
   margin-right: var(--side-margins);
   margin-top: 64px;
