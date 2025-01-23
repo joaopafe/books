@@ -55,8 +55,6 @@ const listBooks = (bookList) => {
   });
 };
 
-getBooks();
-
 inputFile.addEventListener("change", (e) => {
   const inputTarget = e.target;
   const file = inputTarget.files[0];
@@ -145,6 +143,7 @@ const validateBook = () => {
 const postBook = async (title, author, publicationDate, description, image) => {
   await Book.postBook(title, author, publicationDate, description, image);
 
+  closeModal(modalElement);
   getBooks();
 };
 
@@ -153,3 +152,5 @@ const openBookDetails = (bookId) => {
 
   window.location.href = "../bookDetailsPage/book-details.page.html";
 };
+
+getBooks();
