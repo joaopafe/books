@@ -160,7 +160,10 @@ const updateBook = async (
   if (response.status === 500)
     window.alert("Servidor fora de ar. Tente novamente mais tarde");
 
-  if (response.status === 200) getBook();
+  if (response.status === 200) {
+    closeModal(modalElement);
+    getBook();
+  }
 };
 
 const deleteBook = async () => {
