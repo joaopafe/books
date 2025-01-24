@@ -128,7 +128,7 @@ If the request is successful, there will be the following return:
 }
 ```
 
-For more details about the task API, you can access the swagger documentation with the API working through the link http://localhost:3000/api-docs.
+For more details about the task API, you can access the swagger documentation with the API working through the link http://localhost:3000/.
 
 ## **Frontend**
 
