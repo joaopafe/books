@@ -20,6 +20,7 @@ bookRouter.get(
       id: Joi.number().positive().required(),
     }),
   }),
+  verifyIfExistsBook,
   BookController.listById
 );
 
