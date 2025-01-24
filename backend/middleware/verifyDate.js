@@ -1,4 +1,5 @@
 const validateBook = require("../../shared/utils/validateDate");
+const errorMessages = require("../config/errorMessages");
 
 const verifyDate = (req, res, next) => {
   const publicationDate = req.body.publicationDate;
@@ -8,7 +9,9 @@ const verifyDate = (req, res, next) => {
   if (isValidBook) {
     next();
   } else {
-    return res.json({ message: "Publication date invalid" });
+    return res
+      .status(400)
+      .json({ message: errorMessages.PUBLICATION_DATE_INVALID });
   }
 };
 
