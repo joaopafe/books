@@ -1,12 +1,15 @@
 const express = require("express");
+
 const { celebrate, Joi, Segments } = require("celebrate");
+
 const verifyIfExistsBody = require("../middleware/verifyIfExistsBody");
 const verifyIfExistsBook = require("../middleware/verifyIfExistsBook");
+const verifyDate = require("../middleware/verifyDate");
 const BookController = require("./BookController");
 
-const bookRouter = express.Router();
-
 BookController.createTable();
+
+const bookRouter = express.Router();
 
 bookRouter.get("/", BookController.listAll);
 
@@ -32,6 +35,7 @@ bookRouter.post(
       image: Joi.string().base64().required(),
     }),
   }),
+  verifyDate,
   BookController.create
 );
 
@@ -53,6 +57,7 @@ bookRouter.put(
       image: Joi.string().base64().required(),
     }),
   }),
+  verifyDate,
   BookController.update
 );
 
