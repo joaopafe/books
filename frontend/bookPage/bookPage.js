@@ -117,26 +117,21 @@ const validateBook = () => {
   const description = descriptionInput.value;
   const imageInput = document.querySelector("#new-image-for-post");
 
-  if (
-    title.length === 0 ||
-    author.length === 0 ||
-    publicationDate.length === 0 ||
-    description.length === 0 ||
-    !imageInput
-  ) {
-    window.alert("Preencha todos os campos de forma válida");
-  }
+  const isValidDate = validateDate(publicationDate);
 
-  if (
-    title.length > 0 &&
-    author.length > 0 &&
-    publicationDate.length > 0 &&
-    description.length > 0 &&
-    imageInput
-  ) {
-    const image = imageInput.src.slice(23);
+  const isValidBook =
+    title.length >= 5 &&
+    author.length >= 5 &&
+    isValidDate &&
+    description.length >= 5 &&
+    imageInput;
+
+  if (isValidBook) {
+    const image = imageInput.src.slice(imageInput.src.indexOf("/9j"));
 
     postBook(title, author, publicationDate, description, image);
+  } else {
+    window.alert("Preencha todos os campos de forma válida");
   }
 };
 
