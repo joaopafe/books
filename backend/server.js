@@ -9,9 +9,10 @@ const bookRouter = require("./book/bookRoutes");
 
 const app = express();
 
+app.use(cors());
+
 app.use("/book", bookRouter);
 
-app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 app.use(errors());
 app.use("/", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
